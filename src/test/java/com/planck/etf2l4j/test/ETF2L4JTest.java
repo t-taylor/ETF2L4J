@@ -1,8 +1,8 @@
 package com.planck.etf2l4j.test;
 
 import com.planck.etf2l4j.ETF2L4J;
-import com.planck.etf2l4j.utils.Player;
-import com.planck.etf2l4j.utils.Team;
+import com.planck.etf2l4j.utils.player.Player;
+import com.planck.etf2l4j.utils.team.Team;
 import org.junit.Before;
 import org.junit.Test;
 import retrofit2.Call;

@@ -1,8 +1,8 @@
 package com.planck.etf2l4j;
 
-import com.planck.etf2l4j.utils.Competition;
-import com.planck.etf2l4j.utils.Player;
-import com.planck.etf2l4j.utils.Team;
+import com.planck.etf2l4j.utils.team.Competition;
+import com.planck.etf2l4j.utils.player.Player;
+import com.planck.etf2l4j.utils.team.Team;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

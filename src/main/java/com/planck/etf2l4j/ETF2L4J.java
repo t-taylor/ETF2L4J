@@ -1,10 +1,11 @@
 package com.planck.etf2l4j;
 
-import com.planck.etf2l4j.utils.Competition;
-import com.planck.etf2l4j.utils.Player;
-import com.planck.etf2l4j.utils.Team;
+import com.planck.etf2l4j.utils.team.Competition;
+import com.planck.etf2l4j.utils.player.Player;
+import com.planck.etf2l4j.utils.team.Team;
 import retrofit2.Call;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ETF2L4J {
 
@@ -13,7 +14,10 @@ public class ETF2L4J {
     private ETF2LService service;
 
     public ETF2L4J() {
-        build = new Retrofit.Builder().baseUrl(URL).build();
+        build = new Retrofit.Builder()
+                .baseUrl(URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
         service = build.create(ETF2LService.class);
     }
 
