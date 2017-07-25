@@ -1,7 +1,7 @@
 package com.planck.etf2l4j;
 
+import com.planck.etf2l4j.utils.response.PlayerResponse;
 import com.planck.etf2l4j.utils.team.Competition;
-import com.planck.etf2l4j.utils.player.Player;
 import com.planck.etf2l4j.utils.team.Team;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -21,7 +21,7 @@ public class ETF2L4J {
         service = build.create(ETF2LService.class);
     }
 
-    public Call<Player> getPlayer(String id) {
+    public Call<PlayerResponse> getPlayer(String id) {
         return service.getPlayer(id);
     }
 
