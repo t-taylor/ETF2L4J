@@ -2,7 +2,6 @@ package com.planck.etf2l4j.utils.recruitment;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.planck.etf2l4j.utils.player.Player;
 import com.planck.etf2l4j.utils.player.SteamInfo;
 
 import java.util.ArrayList;

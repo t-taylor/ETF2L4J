@@ -14,8 +14,6 @@ public class PlayerResponse {
     private Player player;
     private Status status;
 
-    // TODO: parse
-
     public Player getPlayer() {
         return player;
     }

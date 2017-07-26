@@ -35,9 +35,9 @@ public class ETF2L4JTest {
 
         StringBuilder teamString = new StringBuilder("[ ");
         for (Team t : planck.getTeams()) {
-            teamString.append(t.getName()).append(" ,");
+            teamString.append(t.getName()).append(" , ");
         }
-        teamString = new StringBuilder(teamString.substring(0, teamString.length() - 1));
+        teamString = new StringBuilder(teamString.substring(0, teamString.length() - 2));
         System.out.println("Teams: " + teamString + "]");
 
         System.out.println("Country: " + planck.getCountry());
@@ -59,10 +59,10 @@ public class ETF2L4JTest {
 
         StringBuilder psString = new StringBuilder();
         for (PlayerSnapshot ps : pss) {
-            psString.append(ps.getName()).append(" ,");
+            psString.append(ps.getName()).append(" , ");
         }
 
-        psString = new StringBuilder(psString.substring(0, psString.length() - 1) + "]");
+        psString = new StringBuilder(psString.substring(0, psString.length() - 2) + "]");
         System.out.println("Players: " + psString);
     }
 
@@ -79,9 +79,9 @@ public class ETF2L4JTest {
 
         StringBuilder classes = new StringBuilder("[ ");
         for (String c : recPost.getClasses()) {
-            classes.append(c).append(" ,");
+            classes.append(c).append(" , ");
         }
-        System.out.println(classes.substring(0, classes.length() - 1) + "]" );
+        System.out.println(classes.substring(0, classes.length() - 2) + "]" );
 
     }
 
