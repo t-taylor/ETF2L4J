@@ -1,8 +1,8 @@
-package com.planck.etf2l4j.utils.recruitment;
+package com.planck.etf2l4j.utils.response;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.planck.etf2l4j.utils.response.Status;
+import com.planck.etf2l4j.utils.recruitment.PageInfo;
+import com.planck.etf2l4j.utils.recruitment.PlayerRecruitmentPost;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,15 +13,12 @@ public class PlayerRecruitmentResponse {
         recPost = new ArrayList<>();
     }
 
-    @Expose
     @SerializedName("page")
     private PageInfo info;
 
-    @Expose
     @SerializedName("recruitment")
     private List<PlayerRecruitmentPost> recPost;
 
-    @Expose
     private Status status;
 
     public PageInfo getInfo() {

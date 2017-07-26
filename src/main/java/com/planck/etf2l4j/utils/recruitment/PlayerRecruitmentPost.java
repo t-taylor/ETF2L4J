@@ -1,6 +1,5 @@
 package com.planck.etf2l4j.utils.recruitment;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.planck.etf2l4j.utils.player.SteamInfo;
 
@@ -13,21 +12,13 @@ public class PlayerRecruitmentPost {
         classes = new ArrayList<>();
     }
 
-    @Expose
     private List<String> classes;
-    @Expose
     private Comments comments;
-    @Expose
     private int id;
-    @Expose
     private String name;
-    @Expose
     private String skill;
-    @Expose
     private SteamInfo steamInfo;
-    @Expose
     private String type;
-    @Expose
     private Urls ulrs;
 
     public List<String> getClasses() {
@@ -67,9 +58,7 @@ public class PlayerRecruitmentPost {
     }
 
     private class Urls {
-        @Expose
         private String player;
-        @Expose
         @SerializedName("recruitment")
         private String post;
     }

@@ -1,10 +1,9 @@
 package com.planck.etf2l4j.test;
 
-import com.google.gson.annotations.Expose;
 import com.planck.etf2l4j.ETF2L4J;
 import com.planck.etf2l4j.utils.player.Player;
 import com.planck.etf2l4j.utils.recruitment.PlayerRecruitmentPost;
-import com.planck.etf2l4j.utils.recruitment.PlayerRecruitmentResponse;
+import com.planck.etf2l4j.utils.response.PlayerRecruitmentResponse;
 import com.planck.etf2l4j.utils.response.PlayerResponse;
 import com.planck.etf2l4j.utils.response.TeamResponse;
 import com.planck.etf2l4j.utils.team.PlayerSnapshot;

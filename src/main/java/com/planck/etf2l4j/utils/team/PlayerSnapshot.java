@@ -1,37 +1,46 @@
 package com.planck.etf2l4j.utils.team;
 
-import com.google.gson.annotations.Expose;
 import com.planck.etf2l4j.utils.player.SteamInfo;
 
 public class PlayerSnapshot {
 
-    @Expose
     private String country;
-    @Expose
     private int id;
-    @Expose
     private String name;
-    @Expose
     private SteamInfo steam;
-    @Expose
     private String url;
 
+    /**
+     * @return player's country
+     */
     public String getCountry() {
         return country;
     }
 
+    /**
+     * @return player's id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @return Steam info
+     */
     public SteamInfo getSteam() {
         return steam;
     }
 
+    /**
+     * @return api url
+     */
     public String getUrl() {
         return url;
     }

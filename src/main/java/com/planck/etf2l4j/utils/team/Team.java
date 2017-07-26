@@ -1,6 +1,5 @@
 package com.planck.etf2l4j.utils.team;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -15,49 +14,69 @@ public class Team {
 
     // @Expose
     // private List<Competition> competitions;
-    @Expose
     private String country;
-    @Expose
     private String homepage;
-    @Expose
     private int id;
-    @Expose
     private IrcData irc;
-    @Expose
     private String name;
-    @Expose
     @SerializedName("players")
     private List<PlayerSnapshot> players;
 
+    /**
+     * @return List of competitions
+     */
     public List<Competition> getCompetitions() {
         return null;
         // return competitions;
     }
 
+    /**
+     * @return Country string
+     */
     public String getCountry() {
         return country;
     }
 
+    /**
+     * @return Team homepage
+     */
     public String getHomepage() {
         return homepage;
     }
 
+    /**
+     * @return ETF2L id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @return Team name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * To get a player from a team you need to get the id and then get another call to the ETF2L4J object and ask for
+     * the appropriate players details
+     * @return List of players
+     */
     public List<PlayerSnapshot> getPlayers() {
         return players;
     }
 
+    /**
+     * @return IRC channel
+     */
     public String getIRCChannel() {
         return irc.channel;
     }
 
+    /**
+     * @return IRC network
+     */
     public String getIRCNetwork() {
         return irc.network;
     }

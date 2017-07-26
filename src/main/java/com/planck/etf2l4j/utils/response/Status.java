@@ -1,18 +1,22 @@
 package com.planck.etf2l4j.utils.response;
 
-import com.google.gson.annotations.Expose;
-
 public class Status {
 
-    @Expose
     private int code;
-    @Expose
     private String message;
 
+    /**
+     * Returns status code
+     * @return Status code
+     */
     public int getCode() {
         return code;
     }
 
+    /**
+     * Returns status message
+     * @return Status message
+     */
     public String getMessage() {
         return message;
     }

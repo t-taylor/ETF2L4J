@@ -1,6 +1,6 @@
 package com.planck.etf2l4j;
 
-import com.planck.etf2l4j.utils.recruitment.PlayerRecruitmentResponse;
+import com.planck.etf2l4j.utils.response.PlayerRecruitmentResponse;
 import com.planck.etf2l4j.utils.response.PlayerResponse;
 import com.planck.etf2l4j.utils.response.TeamResponse;
 import com.planck.etf2l4j.utils.team.Competition;
