@@ -2,6 +2,8 @@
 
 Java wrapper for the ETF2L API
 
+[Download 1.0](https://github.com/t-taylor/ETF2L4J/raw/master/ETF2L4J-1.0.jar)
+
 ## Usage
 
 ```java
