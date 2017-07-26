@@ -54,6 +54,8 @@ public class ETF2L4JTest {
         System.out.println("Team: " + gbk.getName());
 
         List<PlayerSnapshot> pss = gbk.getPlayers();
+
+        // Fails occasionally because of bad API response
         assert pss != null;
 
         StringBuilder psString = new StringBuilder();
