@@ -1,8 +1,8 @@
 package com.planck.etf2l4j;
 
 import com.planck.etf2l4j.utils.response.PlayerResponse;
+import com.planck.etf2l4j.utils.response.TeamResponse;
 import com.planck.etf2l4j.utils.team.Competition;
-import com.planck.etf2l4j.utils.team.Team;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -25,7 +25,7 @@ public class ETF2L4J {
         return service.getPlayer(id);
     }
 
-    public Call<Team> getTeam(String id) {
+    public Call<TeamResponse> getTeam(String id) {
         return service.getTeam(id);
     }
 

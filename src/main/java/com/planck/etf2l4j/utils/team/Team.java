@@ -1,20 +1,19 @@
 package com.planck.etf2l4j.utils.team;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.Expose;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Team {
 
-    public static Team parseJson(String response) {
-        Gson gson = new GsonBuilder().create();
-        return gson.fromJson(response, Team.class);
+    public Team() {
+        // competitions = new ArrayList<>();
+        players = new ArrayList<>();
     }
 
-    @Expose
-    private List<Competition> competitions;
+    // @Expose
+    // private List<Competition> competitions;
     @Expose
     private String country;
     @Expose
@@ -29,7 +28,8 @@ public class Team {
     private List<PlayerSnapshot> players;
 
     public List<Competition> getCompetitions() {
-        return competitions;
+        return null;
+        // return competitions;
     }
 
     public String getCountry() {
@@ -63,10 +63,5 @@ public class Team {
     private class IrcData {
         public String channel;
         public String network;
-
-        public IrcData parseJSON(String response) {
-            Gson gson = new GsonBuilder().create();
-            return gson.fromJson(response, IrcData.class);
-        }
     }
 }

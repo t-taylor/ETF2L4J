@@ -7,11 +7,6 @@ import com.planck.etf2l4j.utils.player.SteamInfo;
 
 public class PlayerSnapshot {
 
-    public static PlayerSnapshot parseJson(String response) {
-        Gson gson = new GsonBuilder().create();
-        return gson.fromJson(response, PlayerSnapshot.class);
-    }
-
     @Expose
     private String country;
     @Expose
