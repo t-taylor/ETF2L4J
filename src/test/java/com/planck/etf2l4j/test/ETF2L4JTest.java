@@ -1,11 +1,19 @@
 package com.planck.etf2l4j.test;
 
+import com.google.gson.annotations.Expose;
 import com.planck.etf2l4j.ETF2L4J;
+import com.planck.etf2l4j.utils.player.Player;
+import com.planck.etf2l4j.utils.recruitment.PlayerRecruitmentPost;
+import com.planck.etf2l4j.utils.recruitment.PlayerRecruitmentResponse;
 import com.planck.etf2l4j.utils.response.PlayerResponse;
 import com.planck.etf2l4j.utils.response.TeamResponse;
+import com.planck.etf2l4j.utils.team.PlayerSnapshot;
+import com.planck.etf2l4j.utils.team.Team;
 import org.junit.Before;
 import org.junit.Test;
 import retrofit2.Call;
+
+import java.util.List;
 
 public class ETF2L4JTest {
 
@@ -19,16 +27,62 @@ public class ETF2L4JTest {
     @Test
     public void PlayerTest() throws Exception {
         Call<PlayerResponse> playerCall = etf2L4J.getPlayer("115719");
-        String name = playerCall.execute().body().getPlayer().getName();
-        System.out.print("Player: " + name);
+        Player planck = playerCall.execute().body().getPlayer();
+
+        assert planck != null;
+
+        System.out.println("Player: " + planck.getName());
+
+        StringBuilder teamString = new StringBuilder("[ ");
+        for (Team t : planck.getTeams()) {
+            teamString.append(t.getName()).append(" ,");
+        }
+        teamString = new StringBuilder(teamString.substring(0, teamString.length() - 1));
+        System.out.println("Teams: " + teamString + "]");
+
+        System.out.println("Country: " + planck.getCountry());
     }
 
 
     @Test
     public void TeamTest() throws Exception {
+
         Call<TeamResponse> teamCall = etf2L4J.getTeam("27874");
-        String name = teamCall.execute().body().getTeam().getName();
-        System.out.println("Team: " + name);
+        Team gbk = teamCall.execute().body().getTeam();
+
+        assert gbk != null;
+
+        System.out.println("Team: " + gbk.getName());
+
+        List<PlayerSnapshot> pss = gbk.getPlayers();
+        assert pss != null;
+
+        StringBuilder psString = new StringBuilder();
+        for (PlayerSnapshot ps : pss) {
+            psString.append(ps.getName()).append(" ,");
+        }
+
+        psString = new StringBuilder(psString.substring(0, psString.length() - 1) + "]");
+        System.out.println("Players: " + psString);
+    }
+
+    @Test
+    public void PlayerRecruitmentTest() throws Exception {
+        Call<PlayerRecruitmentResponse> recCall = etf2L4J.getPlayerRecruitmentPost(1);
+        List<PlayerRecruitmentPost> recPosts = recCall.execute().body().getRecPost();
+
+        assert recPosts != null;
+
+        PlayerRecruitmentPost recPost = recPosts.get(0);
+
+        System.out.println(recPost.getName());
+
+        StringBuilder classes = new StringBuilder("[ ");
+        for (String c : recPost.getClasses()) {
+            classes.append(c).append(" ,");
+        }
+        System.out.println(classes.substring(0, classes.length() - 1) + "]" );
+
     }
 
 }

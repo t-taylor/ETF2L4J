@@ -1,6 +1,7 @@
 package com.planck.etf2l4j.utils.team;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,7 @@ public class Team {
     @Expose
     private String name;
     @Expose
+    @SerializedName("players")
     private List<PlayerSnapshot> players;
 
     public List<Competition> getCompetitions() {

@@ -1,5 +1,6 @@
 package com.planck.etf2l4j;
 
+import com.planck.etf2l4j.utils.recruitment.PlayerRecruitmentResponse;
 import com.planck.etf2l4j.utils.response.PlayerResponse;
 import com.planck.etf2l4j.utils.response.TeamResponse;
 import com.planck.etf2l4j.utils.team.Competition;
@@ -17,4 +18,8 @@ public interface ETF2LService {
 
     @GET("competition/{id}.json")
     Call<Competition> getCompetition(@Path("id") String id);
+
+    @GET("recruitment/players/{page}.json")
+    Call<PlayerRecruitmentResponse> getPlayerRecuitment(@Path("page") int page);
+
 }

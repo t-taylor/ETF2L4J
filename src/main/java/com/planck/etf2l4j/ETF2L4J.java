@@ -1,5 +1,6 @@
 package com.planck.etf2l4j;
 
+import com.planck.etf2l4j.utils.recruitment.PlayerRecruitmentResponse;
 import com.planck.etf2l4j.utils.response.PlayerResponse;
 import com.planck.etf2l4j.utils.response.TeamResponse;
 import com.planck.etf2l4j.utils.team.Competition;
@@ -31,6 +32,10 @@ public class ETF2L4J {
 
     public Call<Competition> getCompetition(String id) {
         return service.getCompetition(id);
+    }
+
+    public Call<PlayerRecruitmentResponse> getPlayerRecruitmentPost(int page) {
+        return service.getPlayerRecuitment(page);
     }
 
 }

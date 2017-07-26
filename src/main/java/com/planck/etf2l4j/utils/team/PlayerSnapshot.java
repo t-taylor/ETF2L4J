@@ -1,7 +1,5 @@
 package com.planck.etf2l4j.utils.team;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.Expose;
 import com.planck.etf2l4j.utils.player.SteamInfo;
 
