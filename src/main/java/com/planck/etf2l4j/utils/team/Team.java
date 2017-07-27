@@ -1,6 +1,8 @@
 package com.planck.etf2l4j.utils.team;
 
 import com.google.gson.annotations.SerializedName;
+import com.planck.etf2l4j.utils.competition.Competition;
+import com.planck.etf2l4j.utils.player.PlayerSnapshot;
 
 import java.util.ArrayList;
 import java.util.List;

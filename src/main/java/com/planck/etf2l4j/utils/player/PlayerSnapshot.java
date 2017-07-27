@@ -1,4 +1,4 @@
-package com.planck.etf2l4j.utils.team;
+package com.planck.etf2l4j.utils.player;
 
 import com.planck.etf2l4j.utils.player.SteamInfo;
 

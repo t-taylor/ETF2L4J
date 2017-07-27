@@ -1,9 +1,6 @@
 package com.planck.etf2l4j;
 
-import com.planck.etf2l4j.utils.response.PlayerRecruitmentResponse;
-import com.planck.etf2l4j.utils.response.PlayerResponse;
-import com.planck.etf2l4j.utils.response.TeamResponse;
-import com.planck.etf2l4j.utils.team.Competition;
+import com.planck.etf2l4j.utils.response.*;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -16,10 +13,15 @@ public interface ETF2LService {
     @GET("team/{id}.json")
     Call<TeamResponse> getTeam(@Path("id") String id);
 
-    @GET("competition/{id}.json")
-    Call<Competition> getCompetition(@Path("id") String id);
-
     @GET("recruitment/players/{page}.json")
-    Call<PlayerRecruitmentResponse> getPlayerRecuitment(@Path("page") int page);
+    Call<PlayerRecruitmentResponse> getPlayerRecruitment(@Path("page") int page);
 
+    @GET("competition/{id}.json")
+    Call<CompetitionResponse> getCompetition(@Path("id") String id);
+
+    @GET("competition/{id}/matches.json")
+    Call<CompetitionMatchesResponse> getCompetitionMatches(@Path("id") String id);
+
+    @GET("competition/{id}/results.json")
+    Call<CompetitionResultsResponse> getCompetitionResults(@Path("id") String id);
 }
