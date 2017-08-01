@@ -19,9 +19,9 @@ public interface ETF2LService {
     @GET("competition/{id}.json")
     Call<CompetitionResponse> getCompetition(@Path("id") String id);
 
-    @GET("competition/{id}/matches.json")
-    Call<CompetitionMatchesResponse> getCompetitionMatches(@Path("id") String id);
+    @GET("competition/{id}/matches/{page}.json")
+    Call<CompetitionMatchesResponse> getCompetitionMatches(@Path("id") String id, @Path("page") int page);
 
-    @GET("competition/{id}/results.json")
-    Call<CompetitionResultsResponse> getCompetitionResults(@Path("id") String id);
+    @GET("competition/{id}/results/{page}.json")
+    Call<CompetitionResultsResponse> getCompetitionResults(@Path("id") String id, @Path("page") int page);
 }

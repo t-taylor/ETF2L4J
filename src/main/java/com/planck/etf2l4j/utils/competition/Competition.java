@@ -68,7 +68,7 @@ public class Competition {
      * @return A call to the matches list
      */
     public Call<CompetitionMatchesResponse> getMatches(ETF2L4J e) {
-        return e.getCompetitionMatches(Integer.toString(id));
+        return e.getCompetitionMatches(Integer.toString(id), 1);
     }
 
     /**
@@ -76,7 +76,7 @@ public class Competition {
      * @return A call to the matches list
      */
     public Call<CompetitionResultsResponse> getResults(ETF2L4J e) {
-        return e.getCompetitionResults(Integer.toString(id));
+        return e.getCompetitionResults(Integer.toString(id), 1);
     }
 
     private class URLs {

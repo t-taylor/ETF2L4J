@@ -2,8 +2,12 @@ package com.planck.etf2l4j;
 
 import com.planck.etf2l4j.utils.response.*;
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import java.util.function.Consumer;
 
 public class ETF2L4J implements ETF2LService {
 
@@ -69,8 +73,8 @@ public class ETF2L4J implements ETF2LService {
      * @return List of matches
      */
     @Override
-    public Call<CompetitionMatchesResponse> getCompetitionMatches(String id) {
-        return service.getCompetitionMatches(id);
+    public Call<CompetitionMatchesResponse> getCompetitionMatches(String id, int page) {
+        return service.getCompetitionMatches(id, page);
     }
 
     /**
@@ -80,8 +84,8 @@ public class ETF2L4J implements ETF2LService {
      * @return List of results
      */
     @Override
-    public Call<CompetitionResultsResponse> getCompetitionResults(String id) {
-        return service.getCompetitionResults(id);
+    public Call<CompetitionResultsResponse> getCompetitionResults(String id, int page) {
+        return service.getCompetitionResults(id, page);
     }
 
 }
