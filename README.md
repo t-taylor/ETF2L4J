@@ -15,7 +15,7 @@ String playerId = "115791";
 // Returns a call object for you to handle
 Call<PlayerResponse> playerCall = etf2l.getPlayer(playerId);
 
-String name = playerCall.execute().getPlayer().getName();
+String name = playerCall.execute().body().getPlayer().getName();
 
 // prints 'planck'
 System.out.println(name);
